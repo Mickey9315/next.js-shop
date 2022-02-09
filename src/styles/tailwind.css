@@ -7,3 +7,11 @@ select::after {
   position: absolute;
   right: 0.5rem;
 }
+
+html,
+body {
+  @apply bg-indigo-600;
+  background-image: url("/background.svg");
+  background-attachment: fixed;
+  background-size: cover;
+}

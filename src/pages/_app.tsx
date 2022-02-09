@@ -33,12 +33,10 @@ function EshopApp({ Component, pageProps }: AppProps) {
         <meta name="og:description" content={meta.description} />
       </Head>
 
-      <div className="bg-indigo-600">
-        <div className="container min-h-screen px-4 py-10 mx-auto space-y-10 text-white md:px-0 md:w-7/12">
-          <Header />
-          <Component {...pageProps} />
-          <Footer />
-        </div>
+      <div className="container min-h-screen px-4 py-10 mx-auto space-y-10 text-white md:px-0 md:w-7/12">
+        <Header />
+        <Component {...pageProps} />
+        <Footer />
       </div>
     </>
   );
