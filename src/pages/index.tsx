@@ -74,6 +74,11 @@ const Home: NextPage = () => {
     );
   }, [getSortedGames, debouncedInput]);
 
+  const handleNext = () => {
+    setLimit((prev) => prev + 100);
+    mutate();
+  };
+
   if (isLoading) return <Loader />;
   else if (error) return <div>Error</div>;
   else
@@ -106,15 +111,14 @@ const Home: NextPage = () => {
         </div>
 
         <InfiniteScroll
+          className="grid gap-4 md:grid-cols-2"
           dataLength={getFilteredGames.length}
-          next={() => {
-            setLimit((prev) => prev + 100);
-            mutate();
-          }}
           hasMore={getFilteredGames.length > 0}
           loader={<p className="col-span-2 text-center">Loading...</p>}
-          endMessage={<p className="col-span-2 text-center">No more results found.</p>}
-          className="grid gap-4 md:grid-cols-2"
+          endMessage={
+            <p className="col-span-2 text-center">No more results found.</p>
+          }
+          next={handleNext}
         >
           {getFilteredGames.map((game, index) => (
             <GameCard key={game.name + index} game={game} />
