@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+select::after {
+  content: ">";
+  position: absolute;
+  right: 0.5rem;
+}
