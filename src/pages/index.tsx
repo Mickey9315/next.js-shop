@@ -84,19 +84,19 @@ const Home: NextPage = () => {
   else
     return (
       <>
-        <div className="flex items-center justify-between space-x-4">
+        <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
           <input
-            className="w-3/5 px-4 py-2 placeholder-gray-300 rounded-md outline-none appearance-none bg-gray-400/50"
+            className="w-full px-4 py-2 placeholder-gray-300 rounded-md outline-none appearance-none md:w-3/5 bg-gray-400/50"
             onChange={(event) => setInput(event.target.value)}
             value={input}
             placeholder="Filter results"
           />
 
-          <div className="flex items-center space-x-2">
-            <span>Sort By:</span>
+          <div className="flex items-center justify-between w-full space-x-10 md:w-max md:space-x-2">
+            <span className="flex-shrink-0">Sort By:</span>
 
             <select
-              className="px-4 py-2 text-center rounded-md appearance-none bg-gray-400/50 focus:outline-none"
+              className="w-full px-4 py-2 text-center rounded-md appearance-none bg-gray-400/50 focus:outline-none"
               onChange={(event) => setSort(event.target.value)}
               value={sortBy}
             >

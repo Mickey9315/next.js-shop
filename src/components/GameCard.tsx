@@ -5,7 +5,7 @@ import type { GameEuResult } from "../pages/api/getGames";
 
 export const GameCard: React.FC<{ game: GameEuResult }> = ({ game }) => {
   return (
-    <div className="p-4 space-y-4 bg-white rounded-md backdrop-blur-md bg-gray-100/10">
+    <div className="w-full p-4 space-y-4 overflow-x-hidden bg-white rounded-md backdrop-blur-md bg-gray-100/10">
       <div className="flex items-center flex-shrink-0 space-x-4">
         <div className="flex flex-shrink-0 rounded-md">
           <Image

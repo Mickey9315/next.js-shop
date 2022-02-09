@@ -1,8 +1,8 @@
 export const Loader: React.FC = () => (
   <>
-    <div className="flex items-center justify-between space-x-4">
-      <div className="w-3/5 h-10 px-4 py-2 rounded-md animate-pulse bg-gray-100/10" />
-      <div className="w-1/5 h-10 px-4 py-2 rounded-md animate-pulse bg-gray-100/10" />
+    <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
+      <div className="w-full h-10 px-4 py-2 rounded-md md:w-3/5 animate-pulse bg-gray-100/10" />
+      <div className="w-full h-10 px-4 py-2 rounded-md md:w-1/5 animate-pulse bg-gray-100/10" />
     </div>
 
     <div className="grid gap-4 md:grid-cols-2">
