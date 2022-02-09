@@ -112,8 +112,8 @@ const Home: NextPage = () => {
             mutate();
           }}
           hasMore={getFilteredGames.length > 0}
-          loader={<p>Loading...</p>}
-          endMessage={<p>No more results found.</p>}
+          loader={<p className="col-span-2 text-center">Loading...</p>}
+          endMessage={<p className="col-span-2 text-center">No more results found.</p>}
           className="grid gap-4 md:grid-cols-2"
         >
           {getFilteredGames.map((game, index) => (
