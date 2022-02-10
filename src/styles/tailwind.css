@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-select::after {
-  content: ">";
-  position: absolute;
-  right: 0.5rem;
-}
-
 html,
 body {
   @apply bg-fixed bg-cover bg-[url('/background.svg')] bg-indigo-600;
