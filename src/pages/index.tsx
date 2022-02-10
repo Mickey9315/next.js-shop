@@ -114,9 +114,9 @@ const Home: NextPage = () => {
           className="grid gap-4 md:grid-cols-2"
           dataLength={getFilteredGames.length}
           hasMore={getFilteredGames.length > 0}
-          loader={<p className="col-span-2 text-center">Loading...</p>}
+          loader={<p className="text-center md:col-span-2">Loading...</p>}
           endMessage={
-            <p className="col-span-2 text-center">No more results found.</p>
+            <p className="text-center md:col-span-2">No more results found.</p>
           }
           next={handleNext}
         >
