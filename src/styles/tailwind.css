@@ -10,8 +10,6 @@ select::after {
 
 html,
 body {
-  @apply bg-indigo-600;
+  @apply bg-indigo-600 bg-fixed bg-cover;
   background-image: url("/background.svg");
-  background-attachment: fixed;
-  background-size: cover;
 }
